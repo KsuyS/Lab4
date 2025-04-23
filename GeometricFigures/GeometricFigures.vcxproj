@@ -133,6 +133,7 @@
     <ClCompile Include="CTriangle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CPoint.cpp" />
+    <ClCompile Include="ShapeProcessor.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="CTriangle.h" />
     <ClInclude Include="IShape.h" />
     <ClInclude Include="ISolidShape.h" />
+    <ClInclude Include="ShapeProcessor.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
