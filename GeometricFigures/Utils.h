@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include <cstdint>
-#include <memory> // For std::shared_ptr
-#include "IShape.h" // For PrintShapeDetails
+#include <memory>
+#include "IShape.h"
 
 namespace Utils
 {

@@ -1,13 +1,14 @@
 #include "CRectangle.h"
 #include <sstream>
-#include <iomanip> // For std::fixed, std::setprecision
+#include <iomanip>
+#include <iostream>
 
 CRectangle::CRectangle(CPoint topLeft, double width, double height, uint32_t outlineColor, uint32_t fillColor)
     : m_topLeft(topLeft), m_width(width), m_height(height), m_outlineColor(outlineColor), m_fillColor(fillColor)
 {
     if (width < 0 || height < 0)
     {
-        throw std::invalid_argument("Rectangle width and height must be non-negative.");
+        std::cout << "Rectangle width and height must be non-negative.";
     }
 }
 
@@ -25,8 +26,7 @@ std::string CRectangle::ToString() const
 {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2);
-    oss << "Rectangle: TopLeft" << m_topLeft.ToString()
-        << " Width(" << m_width << ") Height(" << m_height << ")";
+    oss << "Rectangle: TopLeft" << m_topLeft.ToString() << " Width(" << m_width << ") Height(" << m_height << ")";
     return oss.str();
 }
 

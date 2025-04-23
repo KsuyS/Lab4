@@ -1,9 +1,9 @@
 #include "Utils.h"
-#include "ISolidShape.h" // For dynamic_cast
+#include "ISolidShape.h"
 #include <iostream>
 #include <sstream>
-#include <iomanip> // For std::hex, std::setfill, std::setw, std::fixed, std::setprecision
-#include <stdexcept> // For std::invalid_argument
+#include <iomanip>
+#include <stdexcept>
 
 namespace Utils
 {
@@ -11,7 +11,7 @@ namespace Utils
     {
         if (hexStr.length() != 6)
         {
-            throw std::invalid_argument("Invalid hex color string length: " + hexStr);
+            std::cout << "Invalid hex color string length";
         }
         try
         {
@@ -19,11 +19,7 @@ namespace Utils
         }
         catch (const std::invalid_argument& e)
         {
-            throw std::invalid_argument("Invalid hex color string format: " + hexStr);
-        }
-        catch (const std::out_of_range& e)
-        {
-            throw std::out_of_range("Hex color string value out of range: " + hexStr);
+            std::cout << "Invalid hex color string format";
         }
     }
 
@@ -37,17 +33,16 @@ namespace Utils
     void PrintShapeDetails(const IShape& shape)
     {
         std::cout << std::fixed << std::setprecision(2);
-        std::cout << "Shape Type Specifics: " << shape.ToString() << std::endl;
-        std::cout << "Area: " << shape.GetArea() << std::endl;
-        std::cout << "Perimeter: " << shape.GetPerimeter() << std::endl;
-        std::cout << "Outline Color: " << ColorToString(shape.GetOutlineColor()) << std::endl;
+        std::cout << "Shape Type Specifics: " << shape.ToString() << "\n";
+        std::cout << "Area: " << shape.GetArea() << "\n";
+        std::cout << "Perimeter: " << shape.GetPerimeter() << "\n";
+        std::cout << "Outline Color: " << ColorToString(shape.GetOutlineColor()) << "\n";
 
-        // Check if it's a solid shape to print fill color
         const ISolidShape* solidShape = dynamic_cast<const ISolidShape*>(&shape);
         if (solidShape)
         {
-            std::cout << "Fill Color: " << ColorToString(solidShape->GetFillColor()) << std::endl;
+            std::cout << "Fill Color: " << ColorToString(solidShape->GetFillColor()) << "\n";
         }
-        std::cout << "-----------------------------" << std::endl;
+        std::cout << "\n";;
     }
 }

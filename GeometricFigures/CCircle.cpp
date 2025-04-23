@@ -2,13 +2,14 @@
 #include <sstream>
 #include <iomanip>
 #include <stdexcept>
+#include <iostream>
 
 CCircle::CCircle(CPoint center, double radius, uint32_t outlineColor, uint32_t fillColor)
     : m_center(center), m_radius(radius), m_outlineColor(outlineColor), m_fillColor(fillColor)
 {
     if (radius < 0)
     {
-        throw std::invalid_argument("Circle radius must be non-negative.");
+        std::cout << "Circle radius must be non-negative.";
     }
 }
 
@@ -26,8 +27,7 @@ std::string CCircle::ToString() const
 {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2);
-    oss << "Circle: Center" << m_center.ToString()
-        << " Radius(" << m_radius << ")";
+    oss << "Circle: Center" << m_center.ToString() << " Radius(" << m_radius << ")";
     return oss.str();
 }
 

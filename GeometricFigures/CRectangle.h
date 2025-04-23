@@ -14,7 +14,7 @@ public:
     uint32_t GetFillColor() const override;
 
     CPoint GetLeftTop() const;
-    CPoint GetRightBottom() const; // Calculated
+    CPoint GetRightBottom() const;
     double GetWidth() const;
     double GetHeight() const;
 

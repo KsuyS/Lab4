@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometricFigures", "GeometricFigures\GeometricFigures.vcxproj", "{76A1CE16-F92B-4F1D-A3D9-8726A433F626}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometricFiguresTests", "..\GeometricFiguresTests\GeometricFiguresTests.vcxproj", "{0A6808BE-9774-4413-9A2C-4EF4F277F305}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{76A1CE16-F92B-4F1D-A3D9-8726A433F626}.Release|x64.Build.0 = Release|x64
 		{76A1CE16-F92B-4F1D-A3D9-8726A433F626}.Release|x86.ActiveCfg = Release|Win32
 		{76A1CE16-F92B-4F1D-A3D9-8726A433F626}.Release|x86.Build.0 = Release|Win32
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Debug|x64.ActiveCfg = Debug|x64
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Debug|x64.Build.0 = Debug|x64
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Debug|x86.ActiveCfg = Debug|Win32
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Debug|x86.Build.0 = Debug|Win32
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Release|x64.ActiveCfg = Release|x64
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Release|x64.Build.0 = Release|x64
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Release|x86.ActiveCfg = Release|Win32
+		{0A6808BE-9774-4413-9A2C-4EF4F277F305}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
