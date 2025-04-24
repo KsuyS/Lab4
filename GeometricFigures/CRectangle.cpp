@@ -59,3 +59,19 @@ double CRectangle::GetHeight() const
 {
     return m_height;
 }
+
+void CRectangle::Draw(ICanvas& canvas) const
+{
+    std::vector<CPoint> vertices
+    {
+        m_topLeft,
+        CPoint(m_topLeft.x + m_width, m_topLeft.y),
+        CPoint(m_topLeft.x + m_width, m_topLeft.y + m_height),
+        CPoint(m_topLeft.x, m_topLeft.y + m_height)
+    };
+    canvas.FillPolygon(vertices, m_fillColor);
+    for (size_t i = 0; i < vertices.size(); ++i)
+    {
+        canvas.DrawLine(vertices[i], vertices[(i + 1) % vertices.size()], m_outlineColor);
+    }
+}
