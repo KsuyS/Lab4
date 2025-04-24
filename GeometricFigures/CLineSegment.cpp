@@ -37,3 +37,8 @@ CPoint CLineSegment::GetEndPoint() const
 {
     return m_endPoint;
 }
+
+void CLineSegment::Draw(ICanvas& canvas) const
+{
+    canvas.DrawLine(GetStartPoint(), GetEndPoint(), GetOutlineColor());
+}
