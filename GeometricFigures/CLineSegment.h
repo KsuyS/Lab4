@@ -2,8 +2,9 @@
 #include "IShape.h"
 #include "CPoint.h"
 #include "ICanvas.h"
+#include "ICanvasDrawable.h"
 
-class CLineSegment : public IShape
+class CLineSegment : public IShape, public ICanvasDrawable
 {
 public:
     CLineSegment(CPoint start, CPoint end, uint32_t outlineColor);
