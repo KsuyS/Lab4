@@ -5,6 +5,8 @@
 #include "IShape.h"
 #include "ShapeProcessor.h"
 #include <SFML/Graphics.hpp>
+#include "ICanvasDrawable.h"
+#include "CCanvas.h"
 
 int main()
 {
@@ -27,6 +29,31 @@ int main()
     std::shared_ptr<IShape> minPerimeterShape = ShapeProcessing::FindShapeWithSmallestPerimeter(shapes);
 
     ShapeProcessing::PrintShapeAnalysisResults(maxAreaShape, minPerimeterShape);
-    
+    sf::RenderWindow window(sf::VideoMode(1000, 800), "Shapes Visualization");
+    CCanvas canvas(window);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear(sf::Color::White);
+
+        for (const auto& shape : shapes)
+        {
+            auto drawableShape = std::dynamic_pointer_cast<ICanvasDrawable>(shape);
+            if (drawableShape)
+            {
+                drawableShape->Draw(canvas);
+            }
+        }
+
+        window.display();
+    }
+
     return 0;
 }

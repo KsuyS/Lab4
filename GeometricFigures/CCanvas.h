@@ -2,8 +2,9 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "CPoint.h"
+#include "ICanvas.h"
 
-class CCanvas 
+class CCanvas : public ICanvas
 {
 public:
     explicit CCanvas(sf::RenderWindow& window);

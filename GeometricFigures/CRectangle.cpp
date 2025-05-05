@@ -22,7 +22,7 @@ double CRectangle::GetPerimeter() const
     return 2 * (m_width + m_height);
 }
 
-std::string CRectangle::ToString() const // вывод информации о площади и периметре
+std::string CRectangle::ToString() const // добавить вывод информации о площади и периметре
 {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2);
