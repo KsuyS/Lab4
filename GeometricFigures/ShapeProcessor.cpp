@@ -10,6 +10,8 @@
 #include "CCircle.h"
 #include "Utils.h"
 
+// class Factory
+
 namespace ShapeProcessing
 {
     std::shared_ptr<IShape> ParseLine(const std::istringstream& inputStream)
@@ -125,6 +127,8 @@ namespace ShapeProcessing
             }
         }
     }
+
+    // вынести в отдельный файлы логику нахождения фигур и чтения
 
     std::shared_ptr<IShape> FindShapeWithLargestArea(const std::vector<std::shared_ptr<IShape>>& shapes)
     {

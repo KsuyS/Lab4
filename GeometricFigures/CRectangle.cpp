@@ -22,13 +22,15 @@ double CRectangle::GetPerimeter() const
     return 2 * (m_width + m_height);
 }
 
-std::string CRectangle::ToString() const
+std::string CRectangle::ToString() const // вывод информации о площади и периметре
 {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2);
     oss << "Rectangle: TopLeft" << m_topLeft.ToString() << " Width(" << m_width << ") Height(" << m_height << ")";
     return oss.str();
 }
+
+// избавиться от дублирования
 
 uint32_t CRectangle::GetOutlineColor() const
 {

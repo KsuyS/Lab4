@@ -1,7 +1,7 @@
 #pragma once
 #include "ICanvas.h"
 
-class ICanvasDrawable \
+class ICanvasDrawable 
 {
 public:
     virtual ~ICanvasDrawable() = default;
